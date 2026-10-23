@@ -19,3 +19,4 @@ jobs:
         run: |
           python -m unittest discover -s tests -p 'test_local*.py' -v
           python -m unittest discover -s tests -p 'test_curated*.py' -v
+          python -m unittest discover -s tests -p 'test_final_evaluation.py' -v
