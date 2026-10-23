@@ -73,3 +73,5 @@ Thumbs.db
 /install_final_report.py
 
 /reports/removed_examples.csv
+
+/install_release_setup.py

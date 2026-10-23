@@ -2,6 +2,8 @@
 
 A trained Qwen3-14B adapter for concise, source-grounded English news summaries, with a local Gradio application and reproducible evaluation reports. Training runs on a larger GPU; quantized inference runs locally using llama.cpp with CPU/GPU offloading.
 
+![NeGm summarizer demo](docs/images/demo.png)
+
 ## What is implemented
 
 - Curated XSum articles paired with source-checked, AI-reviewed targets.
@@ -9,9 +11,11 @@ A trained Qwen3-14B adapter for concise, source-grounded English news summaries,
 - QLoRA training and selection of the lowest-loss validation checkpoint.
 - Official Q4_K_M base weights plus the trained LoRA adapter in GGUF format.
 - Local inference, a two-panel Gradio UI, summary copy/download, and length/latency reporting.
-- Resumable validation comparisons, a documented review decision, nine reproducible figures, and focused service tests.
+- Resumable validation comparisons, a documented review decision, eleven recorded figures, and focused service tests.
 
 ## Local demo
+
+**First-time setup:** follow [the fresh-checkout instructions](docs/setup.md#fresh-checkout-local-inference). The trained adapter is distributed separately; its public release URL is pending.
 
 The existing project expects the following files under `artifacts/qwen3_14b_curated_v2_1200/local_model/`:
 
@@ -128,7 +132,6 @@ A source-based assistant review flagged 17 material factual issues, four unsuppo
 
 ![Final test lengths and latency](reports/figures/10_final_test_runtime.png)
 
-## Remaining release work
+## Release status
 
-Verify installation from a clean checkout, finish the interface screenshots and upstream licensing review, then publish code and aggregate evidence. Full articles, weights, saved login and runtime caches stay outside Git.
-![NeGm summarizer demo](docs/images/demo.png)
+The 11 focused service, curated-data and evaluation tests pass from a clean Git checkout in the existing Python environment. The screenshot shows the working local app. Separate scripts prepare a new local environment and export the verified adapter; a clean-host GPU installation and a public adapter download URL are still pending. See [setup](docs/setup.md) and [third-party notices](docs/third_party_notices.md). Full training/evaluation articles, weights, saved login and runtime caches stay outside source Git; built-in demonstration excerpts are identified in the notices.

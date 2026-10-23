@@ -1,5 +1,39 @@
 # Setup and operations
 
+## Fresh checkout: local inference
+
+Supported target: Linux/WSL2 x86_64, Python 3.10+, an NVIDIA driver compatible with the pinned CUDA 12.8 native runtime, and sufficient host memory. The recorded workstation used an 8 GB Quadro RTX 4000 and 15 GiB available to WSL. Other hardware has not been benchmarked. Run `nvidia-smi` in WSL before setup.
+
+1. Obtain `negm-qwen3-v2-local-adapter.zip` from the project maintainer. This trained bundle is separate from Git; a release download URL has not yet been published. Cloning the code alone is insufficient to reproduce this trained model.
+2. Open a terminal at the cloned project root. If Python cannot create a virtual environment, install the matching Python venv package for your distribution.
+3. Run the explicit setup command below, replacing the bundle path. This downloads approximately 9 GB of official pinned Qwen base weights when absent and installs Gradio in a project-local environment. Existing matching model files are reused; different files are rejected.
+
+```bash
+python scripts/setup_local.py --bundle /path/to/negm-qwen3-v2-local-adapter.zip --download-base
+python run_local_summary.py --check
+python run_local_summary.py
+```
+
+The first application launch downloads the pinned native CUDA runtime (approximately 770 MB). The bundled adapter avoids CPU conversion and avoids installing PyTorch for inference. Setup downloads are additional to the adapter archive. Keep enough disk for the base, environment and runtime; the script requires at least 11 GiB free before downloading the base, but dependency downloads may require more.
+
+Open http://127.0.0.1:7860 after `READY`. Keep the terminal running. The launcher uses the trained adapter together with the base model. An offline checksum-only check is available:
+
+```bash
+python scripts/setup_local.py --check
+```
+
+The code and focused tests were verified from a clean Git checkout using the existing Python environment. A complete first-time installation and native GPU launch on a separate clean host have not yet been verified.
+
+## Export the deployed trained adapter
+
+On the working maintainer workstation:
+
+```bash
+python scripts/export_local_adapter.py
+```
+
+This writes `artifacts/release/negm-qwen3-v2-local-adapter.zip`, with exactly the converted adapter and identity record. It verifies the known deployed adapter checksum. It performs no downloads or training. Keep the ZIP out of source Git; distribute it separately after checking the upstream notices in [third-party notices](third_party_notices.md).
+
 ## Existing local workstation
 
 Use WSL and Python 3.10+. The root launcher reuses `.local_tools/qwen_conversion/venv` and does not upgrade the Conda environment. The model and converted adapter should already exist in the documented local_model directory.
