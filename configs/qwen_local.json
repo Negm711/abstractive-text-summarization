@@ -1,0 +1,16 @@
+{
+  "model": "Qwen/Qwen3-14B",
+  "base_revision": "40c069824f4251a91eefaf281ebe4c544efd3e18",
+  "runtime_release": "b11669",
+  "adapter_sha256": "667932dc21e1c6acd66c0ccb008deaabda1d8af375c14a6d5024990476138cb3",
+  "default_policy": "baseline",
+  "candidate_policy": "grounded-v1",
+  "context_tokens": 4096,
+  "max_new_tokens": 160,
+  "max_summary_words_target": 40,
+  "server_host": "127.0.0.1",
+  "server_port": 8087,
+  "gradio_port": 7860,
+  "source_review_default": false,
+  "note": "Loaded by summarization.local.settings; model identity is pinned. Context/output budgets remain explicit service contracts."
+}

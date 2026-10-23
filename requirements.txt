@@ -1,0 +1,2 @@
+# Lightweight local application dependencies. Training/analysis environments are separate.
+-r requirements/local.txt

@@ -1,0 +1,50 @@
+{
+  "figures": [
+    {
+      "file": "01_raw_data_quality.png",
+      "caption": "Historical raw-dataset audit; exact duplicates only. This is not the curated Qwen training sample."
+    },
+    {
+      "file": "02_cleaning_retention.png",
+      "caption": "Recorded cleaning report; does not represent 1,200-example curation eligibility."
+    },
+    {
+      "file": "03_validation_lengths.png",
+      "caption": "Local development comparison, n=20 validation articles; whitespace-delimited word counts."
+    },
+    {
+      "file": "04_word_reduction.png",
+      "caption": "Compression measures length only; a shorter summary is not necessarily more accurate or useful."
+    },
+    {
+      "file": "05_local_latency.png",
+      "caption": "Quadro RTX 4000 + CPU; one sequential run. Total review time includes the draft and review stages, not startup."
+    },
+    {
+      "file": "06_length_compliance.png",
+      "caption": "A formatting constraint, not a factual-accuracy measure. Baseline and review use the same articles."
+    },
+    {
+      "file": "07_assistant_quality_review.png",
+      "caption": "Assistant assessment of 20 development examples; not independent human annotation or a general accuracy estimate."
+    },
+    {
+      "file": "08_qwen_training_loss.png",
+      "caption": "Recorded training batches and three epoch-level validation observations. Loss does not measure factual accuracy; the two series use different aggregations."
+    },
+    {
+      "file": "09_qwen_training_diagnostics.png",
+      "caption": "Learning rate and gradient norm at logged steps, not reconstructed intermediate updates."
+    },
+    {
+      "file": "10_final_test_runtime.png",
+      "caption": "Frozen final 100 articles: summary length and local latency, no prompt cache; startup excluded."
+    },
+    {
+      "file": "11_final_test_source_review.png",
+      "caption": "Assistant source-based review, not independent human annotation or a calibrated accuracy percentage."
+    }
+  ],
+  "training_history": "reports/training/qwen3_curated_v2/training_history.json",
+  "provenance": "All figures use existing reports. No synthetic training curves or accuracy numbers."
+}

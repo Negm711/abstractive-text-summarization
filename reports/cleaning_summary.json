@@ -1,0 +1,40 @@
+{
+    "metadata": {
+        "timestamp": "2026-10-12T23:55:09.777273",
+        "dataset_name": "EdinburghNLP/xsum",
+        "resolved_commit_sha": "7d4d486c2f8ef850b1a11aead99b894ff3dd7da9"
+    },
+    "policies": [
+        "1. Invalid text (null, empty, whitespace) removed from all splits.",
+        "2. Validation docs overlapping with valid Test docs are removed.",
+        "3. Train docs overlapping with valid Test or Validation docs are removed.",
+        "4. Train duplicates are removed (keeping first occurrence).",
+        "5. Test split duplicates are INTENTIONALLY KEPT to preserve original test distribution."
+    ],
+    "statistics": {
+        "test": {
+            "raw_count": 11334,
+            "excluded_invalid": 1,
+            "excluded_overlap_test": 0,
+            "excluded_overlap_validation": 0,
+            "excluded_train_duplicate": 0,
+            "processed_count": 11333
+        },
+        "validation": {
+            "raw_count": 11332,
+            "excluded_invalid": 5,
+            "excluded_overlap_test": 1,
+            "excluded_overlap_validation": 0,
+            "excluded_train_duplicate": 0,
+            "processed_count": 11326
+        },
+        "train": {
+            "raw_count": 204045,
+            "excluded_invalid": 28,
+            "excluded_overlap_test": 43,
+            "excluded_overlap_validation": 55,
+            "excluded_train_duplicate": 87,
+            "processed_count": 203832
+        }
+    }
+}

@@ -1,0 +1,2 @@
+# Local app only; llama.cpp handles inference outside PyTorch.
+gradio==5.49.1

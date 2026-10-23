@@ -1,0 +1,14 @@
+project:
+  seed: 42
+
+data:
+  dataset_name: EdinburghNLP/xsum
+  revision: "7d4d486c2f8ef850b1a11aead99b894ff3dd7da9"
+  source_column: document
+  target_column: summary
+  id_column: id
+
+paths:
+  data_dir: data
+  artifacts_dir: artifacts
+  reports_dir: reports

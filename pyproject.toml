@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "negm-text-summarization"
+version = "0.2.0"
+description = "Source-grounded English summarization with trained Qwen3 adapters and local GGUF inference."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+local = ["gradio==5.49.1"]
+reports = ["matplotlib==3.10.0", "numpy==2.2.6"]
+
+[project.scripts]
+negm-summarize = "summarization.local.app:main"
+negm-project-inventory = "summarization.local.inventory:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

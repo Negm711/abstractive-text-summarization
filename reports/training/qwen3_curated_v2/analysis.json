@@ -1,0 +1,50 @@
+{
+  "training_records": 70,
+  "validation_records": [
+    {
+      "eval_loss": 1.1677391529083252,
+      "eval_runtime": 52.4662,
+      "eval_samples_per_second": 4.403,
+      "eval_steps_per_second": 4.403,
+      "epoch": 1.0,
+      "step": 116
+    },
+    {
+      "eval_loss": 1.136410117149353,
+      "eval_runtime": 52.5982,
+      "eval_samples_per_second": 4.392,
+      "eval_steps_per_second": 4.392,
+      "epoch": 2.0,
+      "step": 232
+    },
+    {
+      "eval_loss": 1.1450092792510986,
+      "eval_runtime": 53.1983,
+      "eval_samples_per_second": 4.342,
+      "eval_steps_per_second": 4.342,
+      "epoch": 3.0,
+      "step": 348
+    }
+  ],
+  "best": {
+    "eval_loss": 1.136410117149353,
+    "global_step": 232,
+    "epoch": 2.0,
+    "adapter_sha256": "667932dc21e1c6acd66c0ccb008deaabda1d8af375c14a6d5024990476138cb3"
+  },
+  "completed_steps": 348,
+  "runtime_minutes": 48.03787333333333,
+  "history_sha256": "5544c6fc03e6e6b66e646d3b4490a4bbb962f1d33711cec8e7bc2b04484f6821",
+  "interpretation": "Validation loss is lowest at epoch 2. Epoch 3 increases validation loss slightly; this alone does not establish severe overfitting or summary factuality. Training and validation loss use different aggregations.",
+  "inventory": {
+    "files": 95,
+    "exact_duplicate_groups": 0,
+    "cleanup_candidates": [
+      "apply_project_update.py",
+      "enable_demo_sharing.py",
+      "setup_vscode_run.py",
+      "install_selected_samples.py"
+    ],
+    "action": "Installer/helper scripts can be archived after use. Historical BART modules require dependency review before moving. No deletion performed."
+  }
+}

@@ -1,0 +1,7 @@
+# Reproduction environment recorded by the successful Colab run.
+# Use a suitable CUDA PyTorch installation; do not install into local conversion venv.
+transformers==5.18.0
+peft==0.21.1
+accelerate==1.15.0
+bitsandbytes==0.50.2
+datasets==4.8.5

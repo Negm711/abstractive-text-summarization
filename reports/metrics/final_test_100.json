@@ -1,0 +1,93 @@
+{
+  "sample_count": 100,
+  "successful_outputs": 100,
+  "rejected_or_failed": 0,
+  "contract": {
+    "frozen_sample_sha256": "ae7f5f82ee10cb9d256f48017bad1d76f1cb1a6eb960f42d1c05304184dd3de5",
+    "policy": "baseline",
+    "instruction": "Summarize the article in English in one or two complete sentences, using at most 40 words. State the main event and its most important outcome or context. Use only information supported by the article. Preserve uncertainty, attribution, names, numbers and who did what to whom. Do not invent missing details. Write a concise, natural paraphrase without commentary, a heading, reasoning, or a list.",
+    "adapter_sha256": "667932dc21e1c6acd66c0ccb008deaabda1d8af375c14a6d5024990476138cb3",
+    "cache_prompt": false,
+    "service_source_sha256": "9481f2e156bdc97b035845e073cd888288ff02a40746ef27da8cf867735379ba",
+    "runtime_release": "b11669",
+    "runtime_command": [
+      "llama-server",
+      "-m",
+      "Qwen3-14B-Q4_K_M.gguf",
+      "--lora",
+      "qwen3_curated_v2_adapter_f16.gguf",
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "8087",
+      "--ctx-size",
+      "4096",
+      "--parallel",
+      "1",
+      "--batch-size",
+      "128",
+      "--ubatch-size",
+      "64",
+      "--n-gpu-layers",
+      "24",
+      "--threads",
+      "8",
+      "--threads-batch",
+      "8"
+    ]
+  },
+  "rouge_f1": {
+    "rouge1": 0.2655258462591125,
+    "rouge2": 0.06404272478719937,
+    "rougeL": 0.1877348374245734
+  },
+  "rouge_configuration": {
+    "package": "rouge-score==0.1.2",
+    "use_stemmer": true,
+    "aggregation": "Macro mean F1, including empty predictions for rejected outputs; original XSum references."
+  },
+  "length": {
+    "mean_article_words": 363.83,
+    "mean_summary_words": 32.4,
+    "median_summary_words": 32.0,
+    "min_summary_words": 20,
+    "max_summary_words": 43,
+    "within_40_words": 96,
+    "over_40_words": 4,
+    "mean_word_reduction_percent": 84.37259811375417
+  },
+  "latency_seconds": {
+    "mean": 18.83292,
+    "median": 18.0225,
+    "p95": 28.287449999999993,
+    "min": 8.663,
+    "max": 38.755,
+    "sum": 1883.292
+  },
+  "interpretation": "ROUGE, brevity and successful generation do not measure factual accuracy. Latency excludes startup, uses no prompt cache and describes this one workstation run.",
+  "assistant_review": {
+    "counts": {
+      "no_clear_issue": 60,
+      "wording_or_qualification_concern": 19,
+      "unsupported_secondary_detail": 4,
+      "material_factual_issue": 17
+    },
+    "method": "Assistant qualitative comparison of 100 generated summaries with supplied source articles. This is not independent human review or a calibrated general-accuracy benchmark. Sports narrative and relevant live-commentary claims were inspected. No external facts used to rehabilitate unsupported details.",
+    "rubric": {
+      "material_factual_issue": "Contradiction or unsupported assertion about event, actor, role, policy, location, quantity or outcome that changes the news.",
+      "unsupported_secondary_detail": "Unsupported specificity about a secondary name/role/comparison, without changing the main event.",
+      "wording_or_qualification_concern": "Ambiguous phrasing, attribution or certainty requiring editorial review; not counted as a proven material error.",
+      "no_clear_issue": "No clear issue identified in this review; not a guarantee of perfect factuality."
+    },
+    "material_issue_sample_fraction": 0.17,
+    "note": "Assistant assessment, not independent human labels or a calibrated population accuracy percentage."
+  },
+  "input_file_sha256": "0082cbbcea227c74f991e3ab1cf6421b3dd1ef74b7e5d3d85bfe44f0fe47b0db",
+  "known_development_overlap": {
+    "id_overlap": 0,
+    "normalized_article_overlap": 0,
+    "checked_against_ids": 1515,
+    "checked_against_article_hashes": 1515,
+    "scope": "Known recorded development and curation examples only."
+  }
+}

@@ -1,0 +1,21 @@
+name: Source checks
+on: [push, pull_request]
+jobs:
+  local-service:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ['3.10', '3.12']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Compile source
+        run: python -m compileall -q src scripts run_local_summary.py prepare_local_adapter.py prepare_training_data.py
+      - name: Test local service without model weights
+        env:
+          PYTHONPATH: src
+        run: |
+          python -m unittest discover -s tests -p 'test_local*.py' -v
+          python -m unittest discover -s tests -p 'test_curated*.py' -v

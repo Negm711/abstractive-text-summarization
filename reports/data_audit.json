@@ -1,0 +1,116 @@
+{
+  "metadata": {
+    "timestamp": "2026-10-12T20:33:09.098872+00:00",
+    "dataset_name": "EdinburghNLP/xsum",
+    "requested_revision": "main",
+    "resolved_commit_sha": "7d4d486c2f8ef850b1a11aead99b894ff3dd7da9",
+    "datasets_version": "3.2.0",
+    "duplicate_definition": "Extra occurrences after the first; text duplicates count only non-empty strings using exact matching without normalization.",
+    "overlap_definition": "Number of distinct valid document texts shared between splits, not the number of matching rows.",
+    "text_validity_definition": "A valid text is a string containing at least one non-whitespace character. Null and non-string counts are separate."
+  },
+  "splits_metrics": {
+    "train": {
+      "total_rows": 204045,
+      "columns": [
+        "document",
+        "summary",
+        "id"
+      ],
+      "column_types": {
+        "document": "Value(dtype='string', id=None)",
+        "summary": "Value(dtype='string', id=None)",
+        "id": "Value(dtype='string', id=None)"
+      },
+      "source_column": {
+        "nulls": 0,
+        "non_strings": 0,
+        "empty_or_whitespace": 28
+      },
+      "target_column": {
+        "nulls": 0,
+        "non_strings": 0,
+        "empty_or_whitespace": 0
+      },
+      "ids": {
+        "missing_null": 0,
+        "duplicates": 0
+      },
+      "duplicates": {
+        "exact_documents": 172,
+        "exact_doc_sum_pairs": 98,
+        "exact_summaries_info_only": 938
+      }
+    },
+    "validation": {
+      "total_rows": 11332,
+      "columns": [
+        "document",
+        "summary",
+        "id"
+      ],
+      "column_types": {
+        "document": "Value(dtype='string', id=None)",
+        "summary": "Value(dtype='string', id=None)",
+        "id": "Value(dtype='string', id=None)"
+      },
+      "source_column": {
+        "nulls": 0,
+        "non_strings": 0,
+        "empty_or_whitespace": 5
+      },
+      "target_column": {
+        "nulls": 0,
+        "non_strings": 0,
+        "empty_or_whitespace": 0
+      },
+      "ids": {
+        "missing_null": 0,
+        "duplicates": 0
+      },
+      "duplicates": {
+        "exact_documents": 0,
+        "exact_doc_sum_pairs": 0,
+        "exact_summaries_info_only": 9
+      }
+    },
+    "test": {
+      "total_rows": 11334,
+      "columns": [
+        "document",
+        "summary",
+        "id"
+      ],
+      "column_types": {
+        "document": "Value(dtype='string', id=None)",
+        "summary": "Value(dtype='string', id=None)",
+        "id": "Value(dtype='string', id=None)"
+      },
+      "source_column": {
+        "nulls": 0,
+        "non_strings": 0,
+        "empty_or_whitespace": 1
+      },
+      "target_column": {
+        "nulls": 0,
+        "non_strings": 0,
+        "empty_or_whitespace": 0
+      },
+      "ids": {
+        "missing_null": 0,
+        "duplicates": 0
+      },
+      "duplicates": {
+        "exact_documents": 4,
+        "exact_doc_sum_pairs": 3,
+        "exact_summaries_info_only": 11
+      }
+    }
+  },
+  "cross_split_overlap": {
+    "note": "Exact matching of distinct valid document texts. Near-duplicates are not detected.",
+    "train_validation_overlap": 9,
+    "train_test_overlap": 5,
+    "validation_test_overlap": 1
+  }
+}

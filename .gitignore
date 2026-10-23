@@ -1,0 +1,75 @@
+# Python cache and build files
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# Local environments
+.venv/
+venv/
+env/
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Downloaded data, models, and training outputs
+/data/
+/artifacts/
+/.cache/
+/wandb/
+
+# Notebook and test caches
+.ipynb_checkpoints/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Editor and operating system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+# Native runtimes, conversion environments and reversible local updates
+/.local_tools/
+/.project_backups/
+/project_review.zip
+/project_update.zip
+/apply_project_update.py
+/reports/local_runtime/
+/reports/project_inventory.json
+/reports/local_exports/
+
+# Temporary sharing certificates and locally packaged updates
+/.gradio/
+/*_review.zip
+/install_*evidence.py
+/install_selected_samples.py
+/enable_demo_sharing.py
+/setup_vscode_run.py
+/reports/local_quality/demo_sample_selection.json
+# Historical reports contain full upstream articles; keep them local.
+/reports/curation/
+/reports/qwen_baseline/
+/reports/development_articles_30.json
+/reports/evaluation_candidates_130.json
+/reports/model_comparison_preview.json
+/reports/summary_preview.json
+/reports/qwen3_14b_verified_test_100*.json
+/reports/local_quality/direct_vs_review_validation_20.json
+/reports/local_quality/grounded_candidate_validation_20.json
+/reports/local_quality/assistant_review_20.json
+
+/apply_architecture_cleanup.py
+/apply_final_cleanup.py
+/reports/curated_data/statistics.json
+/install_final_evaluation.py
+/reports/final_evaluation/
+/install_final_report.py
+
+/reports/removed_examples.csv
