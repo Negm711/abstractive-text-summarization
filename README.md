@@ -131,3 +131,4 @@ A source-based assistant review flagged 17 material factual issues, four unsuppo
 ## Remaining release work
 
 Verify installation from a clean checkout, finish the interface screenshots and upstream licensing review, then publish code and aggregate evidence. Full articles, weights, saved login and runtime caches stay outside Git.
+![NeGm summarizer demo](docs/images/demo.png)
