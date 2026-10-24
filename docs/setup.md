@@ -4,7 +4,7 @@
 
 Supported target: Linux/WSL2 x86_64, Python 3.10+, an NVIDIA driver compatible with the pinned CUDA 12.8 native runtime, and sufficient host memory. The recorded workstation used an 8 GB Quadro RTX 4000 and 15 GiB available to WSL. Other hardware has not been benchmarked. Run `nvidia-smi` in WSL before setup.
 
-1. Obtain `negm-qwen3-v2-local-adapter.zip` from the project maintainer. This trained bundle is separate from Git; a release download URL has not yet been published. Cloning the code alone is insufficient to reproduce this trained model.
+1. Download `negm-qwen3-v2-local-adapter.zip` and `ADAPTER_LICENSE_AND_NOTICES.txt` from [release v0.2.0](https://github.com/Negm711/abstractive-text-summarization/releases/tag/v0.2.0). The trained bundle is distributed separately from source Git. Cloning the code alone is insufficient to reproduce this trained model.
 2. Open a terminal at the cloned project root. If Python cannot create a virtual environment, install the matching Python venv package for your distribution.
 3. Run the explicit setup command below, replacing the bundle path. This downloads approximately 9 GB of official pinned Qwen base weights when absent and installs Gradio in a project-local environment. Existing matching model files are reused; different files are rejected.
 

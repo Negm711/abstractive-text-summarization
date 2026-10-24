@@ -15,7 +15,7 @@ A trained Qwen3-14B adapter for concise, source-grounded English news summaries,
 
 ## Local demo
 
-**First-time setup:** follow [the fresh-checkout instructions](docs/setup.md#fresh-checkout-local-inference). The trained adapter is distributed separately; its public release URL is pending.
+**First-time setup:** follow [the fresh-checkout instructions](docs/setup.md#fresh-checkout-local-inference). Download the trained adapter and license from [release v0.2.0](https://github.com/Negm711/abstractive-text-summarization/releases/tag/v0.2.0).
 
 The existing project expects the following files under `artifacts/qwen3_14b_curated_v2_1200/local_model/`:
 
@@ -134,4 +134,4 @@ A source-based assistant review flagged 17 material factual issues, four unsuppo
 
 ## Release status
 
-The 11 focused service, curated-data and evaluation tests pass from a clean Git checkout in the existing Python environment. The screenshot shows the working local app. Separate scripts prepare a new local environment and export the verified adapter; a clean-host GPU installation and a public adapter download URL are still pending. See [setup](docs/setup.md) and [third-party notices](docs/third_party_notices.md). Full training/evaluation articles, weights, saved login and runtime caches stay outside source Git; built-in demonstration excerpts are identified in the notices.
+The 11 focused service, curated-data and evaluation tests pass from a clean Git checkout in the existing Python environment. The screenshot shows the working local app. Separate scripts prepare a new local environment and export the verified adapter; The adapter is available in [release v0.2.0](https://github.com/Negm711/abstractive-text-summarization/releases/tag/v0.2.0); a clean-host GPU installation remains unverified. See [setup](docs/setup.md) and [third-party notices](docs/third_party_notices.md). Full training/evaluation articles, weights, saved login and runtime caches stay outside source Git; built-in demonstration excerpts are identified in the notices.
